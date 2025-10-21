@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #242437;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flag-container {
+    position: relative;
+    width: 200px;
+    height: 400px;
+}
+
+.pole {
+    content: "";
+    position: absolute;
+    left: 20px;
+    width: 1em;
+    height: 100%;
+    border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
+    background-image: linear-gradient(#7777, #6660, #555), linear-gradient(90deg, #777, #fff, #555);
+}
+
+.pole::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 4em;
+    height: 4em;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    background-image: radial-gradient(#0004, #0000 60%);
+}
+
+.pole::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 1em;
+    height: 0.4em;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-image: radial-gradient(circle at top, #aaa, #333);
+}
+
+.flag {
+    position: absolute;
+    top: 50%;
+    left: 36px;
+    width: 180px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    transition: top 2s ease-in-out;
+    overflow: hidden;
+}
+
+.saffron {
+    height: 33%;
+    background-color: #FF9933;
+}
+
+.white {
+    height: 34%;
+    background-color: #fff;
+    position: relative;
+}
+
+.green {
+    height: 33%;
+    background-color: #128807;
+}
+
+.ashoka-chakra {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: chakra-spin 5s linear infinite;
+}
+
+.rope-group {
+    width: 20px;
+    z-index: 10;
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px 0;
+}
+
+.rope-group .rope-bundle {
+    width: 100%;
+    height: 3px;
+    border-radius: 20px;
+    background: #222;
+    transform: rotate(var(--rotate));
+}
+
+.rope-group .rope-1 {
+    --rotate: 10deg
+}
+
+.rope-group .rope-2 {
+    --rotate: -4deg
+}
+
+.rope-group .rope-3 {
+    --rotate: 6deg
+}
+
+.rope-group .rope-4 {
+    --rotate: 0deg
+}
+
+.rope-group .rope-5 {
+    --rotate: -6deg
+}
+
+.rope-group .rope-6 {
+    --rotate: 6deg
+}
+
+.rope-group .rope-7 {
+    --rotate: -2deg
+}
+
+.rope-group .rope-8 {
+    --rotate: -10deg
+}
+
+.rope-group.group-1 :is(.rope-2, .rope-5) {
+    --rotate: 10deg
+}
+
+.rope-group.group-1 :is(.rope-3, .rope-6) {
+    --rotate: -10deg
+}
+
+.rope {
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.rope svg {
+    width: 100%;
+    height: auto;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+.rope-label {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    background-color: #a0522d;
+    color: #fff;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.message {
+    margin-left: 50px;
+    font-size: 24px;
+    opacity: 0;
+    color: #fff;
+    transition: opacity 2s ease-in-out;
+}
+
+.message h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+    animation: text-glow 1s infinite alternate;
+}
+
+.message p {
+    font-size: 1.2rem;
+    margin: 10px 0 0 0;
+    animation: text-glow 1s infinite alternate;
+}
+
+@keyframes text-glow {
+    0% {
+        text-shadow: 0 0 10px #ff9933, 0 0 20px #ff9933, 0 0 30px #ff9933;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #138808, 0 0 30px #138808, 0 0 40px #138808;
+    }
+}
+
+@keyframes chakra-spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

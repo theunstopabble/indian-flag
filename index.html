@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Independence Day</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="flag-container">
+            <div class="pole"></div>
+            <div class="flag" id="flag">
+                <div class="saffron"></div>
+                <div class="white">
+                    <img src="https://i.ibb.co/qy2Xkr4/ashoka-chakra.png" alt="Ashoka Chakra" class="ashoka-chakra">
+                </div>
+                <div class="green"></div>
+            </div>
+            <div class="rope-group group-1">
+                <div class="rope-bundle rope-1"></div>
+                <div class="rope-bundle rope-2"></div>
+                <div class="rope-bundle rope-3"></div>
+                <div class="rope-bundle rope-4"></div>
+                <div class="rope-bundle rope-5"></div>
+                <div class="rope-bundle rope-6"></div>
+                <div class="rope-bundle rope-7"></div>
+                <div class="rope-bundle rope-8"></div>
+              </div>
+            <div class="rope" id="rope">
+                <svg width="100" height="350" viewBox="22.5 0 100 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="rope" d="M50 0 V310" stroke="#222" stroke-width="4"></path>
+                    <path id="rope-original" d="M50 0 V310" stroke="black" stroke-width="1" class="hidden"></path>
+                    <path id="rope-extended" d="M50 0 V350" stroke="black" stroke-width="1" class="hidden"></path>
+                    <path id="rope-compressed" d="M50.6794 300 C50.6794 300 51.0304 240 50.6794 200 C49.698 160 40.6105 140 41.2462 100 C42.1339 60 63.6882 50 64.4843 30 C65.1561 10 50.6794 0.5625 50.6794 0.5625" stroke="black" stroke-width="1" class="hidden"></path>
+                    <path id="rope-end" d="M39.282 5.16623C39.9597 1.92197 42.8198 -0.402344 46.134 -0.402344H54.756C58.1211 -0.402344 61.01 1.99207 61.6344 5.29871L68.4328 41.2987C69.2468 45.6092 65.941 49.5977 61.5544 49.5977H38.6135C34.1717 49.5977 30.8531 45.5141 31.7614 41.1662L39.282 5.16623Z" transform="matrix(1,0,0,1,0,300)" fill="#3B2898"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="message" id="message">
+            <h1>Happy Independence Day!</h1>
+            <p>Celebrating 78 Years of Freedom</p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://assets.codepen.io/16327/MorphSVGPlugin3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
